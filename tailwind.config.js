@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        exo: ['"Exo"'],
+        milonga: ['"Milonga"'],
+        redhat: ["Red Hat Text"],
       },
     },
   },
