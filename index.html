@@ -4,22 +4,33 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/output.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Exo|Milonga|Red Hat Text"
+    />
     <script src="script.js" defer></script>
     <title>Library of Athena</title>
   </head>
-  <body class="min-h-screen">
+  <body class="min-h-screen font-redhat font-bold text-lg bg-[#eff0f3]">
     <div class="flex justify-center items-center gap-3 p-[calc(0.2vw+1rem)]">
       <img
         src="images/athena-owl.png "
         alt="athena-owl-logo"
         class="w-[calc(2.5vw+4.5rem)] h-auto"
       />
-      <div class="font-exo text-3xl text-orange-400 font-medium">
-        Library of Athena
+      <div class="font-milonga text-3xl text-orange-400">Library of Athena</div>
+    </div>
+    <div class="flex justify-around items-center">
+      <button
+        class="bg-orange-400 text-white p-4 rounded-md w-[calc(3vw+8rem)] hover:shadow-lg hover:scale-105 transition-transform"
+      >
+        + Add Book
+      </button>
+      <div class="flex justify-between gap-8">
+        <div>No. of books:</div>
+        <div>No. of books read:</div>
       </div>
     </div>
-    <div class=""></div>
     <div class=""></div>
     <div class=""></div>
   </body>
