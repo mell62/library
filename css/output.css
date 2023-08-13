@@ -708,6 +708,10 @@ video {
   padding: 0.75rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .font-milonga {
   font-family: "Milonga";
 }
@@ -728,6 +732,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .text-orange-400 {
