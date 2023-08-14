@@ -11,7 +11,9 @@
     <script src="script.js" defer></script>
     <title>Library of Athena</title>
   </head>
-  <body class="min-h-screen font-redhat font-bold text-lg bg-[#eff0f3]">
+  <body
+    class="flex flex-col min-h-screen font-redhat font-bold text-lg bg-[#eff0f3]"
+  >
     <div class="flex justify-center items-center gap-3 p-[calc(0.2vw+1rem)]">
       <img
         src="images/athena-owl.png "
@@ -53,6 +55,31 @@
             </tr>
           </tbody>
         </table>
+      </div>
+    </div>
+    <div
+      class="fixed left-0 right-0 top-0 bottom-0 bg-[rgba(0,0,0,0.4)] flex justify-center items-center hidden"
+    >
+      <div class="z-10 border border-black bg-white p-16">
+        <form action="" class="flex flex-col gap-4">
+          <div class="flex flex-col">
+            <label for="title">Title:</label
+            ><input type="text" id="title" class="border border-black" />
+          </div>
+          <div class="flex flex-col">
+            <label for="author">Author:</label
+            ><input type="text" id="author" class="border border-black" />
+          </div>
+          <div class="flex flex-col">
+            <label for="pages">No. of Pages:</label
+            ><input type="text" id="pages" class="border border-black" />
+          </div>
+          <div class="flex flex-col">
+            <label for="status">Status:</label
+            ><input type="text" id="status" class="border border-black" />
+          </div>
+          <button>Submit</button>
+        </form>
       </div>
     </div>
   </body>
