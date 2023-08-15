@@ -1,11 +1,14 @@
 const addBtn = document.querySelector(".add-btn");
 const modalContainer = document.querySelector(".modal-container");
 const form = document.querySelector(".book-form");
+const cancelBtn = document.querySelector(".cancel-btn");
 
 addBtn.addEventListener("click", modalAppear);
 
 form.addEventListener("submit", (event) => event.preventDefault());
 form.addEventListener("submit", modalDisappear);
+
+cancelBtn.addEventListener("click", modalDisappear);
 
 function modalAppear() {
   modalContainer.classList.remove("hidden");
