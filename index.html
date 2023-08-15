@@ -69,6 +69,9 @@
             id="title"
             name="title"
             class="border border-black"
+            required
+            autocomplete="off"
+            maxlength="30"
           />
         </div>
         <div class="flex flex-col">
@@ -78,15 +81,22 @@
             id="author"
             name="author"
             class="border border-black"
+            required
+            autocomplete="off"
+            maxlength="30"
           />
         </div>
         <div class="flex flex-col">
           <label for="pages">No. of Pages:</label
           ><input
-            type="text"
+            type="number"
             id="pages"
             name="pages"
             class="border border-black"
+            required
+            autocomplete="off"
+            max="10000"
+            min="1"
           />
         </div>
         <div class="flex justify-center gap-4">
