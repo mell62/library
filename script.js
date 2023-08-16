@@ -5,6 +5,8 @@ const cancelBtn = document.querySelector(".cancel-btn");
 const tbody = document.querySelector("tbody");
 const library = [];
 
+addDefaultContent();
+
 addBtn.addEventListener("click", () => modal.showModal());
 
 form.addEventListener("submit", (event) => event.preventDefault());
@@ -16,6 +18,21 @@ form.addEventListener("submit", addData);
 form.addEventListener("submit", () => modal.close());
 
 cancelBtn.addEventListener("click", () => modal.close());
+
+function addDefaultContent() {
+  const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
+  tbody.innerHTML = `<tr>
+  <th>${defaultBook.title}</th>
+  <td>${defaultBook.author}</td>
+  <td>${defaultBook.pages}</td>
+  <td>${defaultBook.status}</td>
+  <td>
+    <button class="remove">Remove</button>
+  </td>
+</tr>`;
+
+  library.push(defaultBook);
+}
 
 function Book(title, author, pages, status) {
   this.title = title;
