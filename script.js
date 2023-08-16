@@ -75,5 +75,5 @@ function addData() {
   tableStatus.textContent = `${convertStatus(
     library[library.length - 1].status
   )}`;
-  tableAction.textContent = "Remove";
+  tableAction.innerHTML = "<button class='remove'>Remove</button>";
 }
