@@ -21,17 +21,16 @@ cancelBtn.addEventListener("click", () => modal.close());
 
 function addDefaultContent() {
   const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
+  library.push(defaultBook);
   tbody.innerHTML = `<tr>
   <th>${defaultBook.title}</th>
   <td>${defaultBook.author}</td>
   <td>${defaultBook.pages}</td>
   <td>${defaultBook.status}</td>
   <td>
-    <button class="remove">Remove</button>
+    <button class="remove" data-index="0">Remove</button>
   </td>
 </tr>`;
-
-  library.push(defaultBook);
 }
 
 function Book(title, author, pages, status) {
@@ -92,5 +91,7 @@ function addData() {
   tableStatus.textContent = `${convertStatus(
     library[library.length - 1].status
   )}`;
-  tableAction.innerHTML = "<button class='remove'>Remove</button>";
+  tableAction.innerHTML = `<button class='remove' data-index="${
+    library.length - 1
+  }">Remove</button>`;
 }
