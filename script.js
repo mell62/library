@@ -1,3 +1,5 @@
+const numberOfBooks = document.querySelector(".total-books");
+const numberOfBooksRead = document.querySelector(".total-books-read");
 const addBtn = document.querySelector(".add-btn");
 const modal = document.querySelector(".modal");
 const form = document.querySelector(".book-form");
@@ -93,6 +95,8 @@ function renderBooks() {
     )}</button>`;
     tableAction.innerHTML = `<button class='remove' onClick='removeRow(${index})'>Remove</button>`;
   });
+
+  updateTotalBooks();
 }
 
 function clearForm() {
@@ -107,4 +111,13 @@ function removeRow(index) {
 function toggleStatus(index) {
   library[index].toggleStatus();
   renderBooks();
+}
+
+function totalBooks() {
+  let totalBooks = library.length;
+  return totalBooks;
+}
+
+function updateTotalBooks() {
+  numberOfBooks.textContent = totalBooks();
 }
