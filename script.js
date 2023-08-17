@@ -11,10 +11,7 @@ addBtn.addEventListener("click", () => modal.showModal());
 
 form.addEventListener("submit", (event) => event.preventDefault());
 form.addEventListener("submit", addToLibrary);
-form.addEventListener("submit", addRow);
-form.addEventListener("submit", addCells);
-form.addEventListener("submit", addData);
-
+form.addEventListener("submit", renderBooks);
 form.addEventListener("submit", () => modal.close());
 
 cancelBtn.addEventListener("click", () => modal.close());
@@ -22,15 +19,7 @@ cancelBtn.addEventListener("click", () => modal.close());
 function addDefaultContent() {
   const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
   library.push(defaultBook);
-  tbody.innerHTML = `<tr>
-  <th>${defaultBook.title}</th>
-  <td>${defaultBook.author}</td>
-  <td>${defaultBook.pages}</td>
-  <td>${defaultBook.status}</td>
-  <td>
-    <button class="remove" data-index="0">Remove</button>
-  </td>
-</tr>`;
+  renderBooks();
 }
 
 function Book(title, author, pages, status) {
@@ -75,23 +64,33 @@ function convertStatus(status) {
   }
 }
 
-function addData() {
-  const tableHeadings = document.querySelectorAll("th");
-  const tableTitle = tableHeadings[tableHeadings.length - 1];
+function renderBooks() {
+  tbody.innerHTML = "";
+  library.forEach((book, index) => {
+    addRow();
+    addCells();
 
-  const tableData = document.querySelectorAll("td");
-  const tableAuthor = tableData[tableData.length - 4];
-  const tablePages = tableData[tableData.length - 3];
-  const tableStatus = tableData[tableData.length - 2];
-  const tableAction = tableData[tableData.length - 1];
+    const tableHeadings = document.querySelectorAll("th");
+    const tableTitle = tableHeadings[tableHeadings.length - 1];
 
-  tableTitle.textContent = `${library[library.length - 1].title}`;
-  tableAuthor.textContent = `${library[library.length - 1].author}`;
-  tablePages.textContent = `${library[library.length - 1].pages}`;
-  tableStatus.textContent = `${convertStatus(
-    library[library.length - 1].status
-  )}`;
-  tableAction.innerHTML = `<button class='remove' data-index="${
-    library.length - 1
-  }">Remove</button>`;
+    const tableData = document.querySelectorAll("td");
+    const tableAuthor = tableData[tableData.length - 4];
+    const tablePages = tableData[tableData.length - 3];
+    const tableStatus = tableData[tableData.length - 2];
+    const tableAction = tableData[tableData.length - 1];
+
+    tableTitle.textContent = `${book.title}`;
+    tableAuthor.textContent = `${book.author}`;
+    tablePages.textContent = `${book.pages}`;
+    tableStatus.textContent = `${convertStatus(book.status)}`;
+    tableAction.innerHTML = `<button class='remove' data-index="${index}">Remove</button>`;
+  });
 }
+
+// function removeRow() {
+//   tbody.addEventListener("click", (event) => {
+//     if (event.target.className === "remove") {
+//       let index = event.target.getAttribute("data-index");
+//     }
+//   });
+// }
