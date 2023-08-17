@@ -650,10 +650,6 @@ video {
   padding: calc(0.2vw + 1rem);
 }
 
-.p-\[calc\(0\.2vw\+2rem\)\] {
-  padding: calc(0.2vw + 2rem);
-}
-
 .pb-2 {
   padding-bottom: 0.5rem;
 }
@@ -718,6 +714,10 @@ tr{
 td, th{
   width: 100%;
   word-break: break-all;
+}
+
+td{
+  font-weight: 500;
 }
 
 .hover\:bg-orange-400:hover {

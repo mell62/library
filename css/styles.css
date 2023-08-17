@@ -10,3 +10,7 @@ td, th{
     width: 100%;
     word-break: break-all;
 }
+
+td{
+    font-weight: 500;
+}
