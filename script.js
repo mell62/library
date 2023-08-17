@@ -89,7 +89,7 @@ function renderBooks() {
     tableStatus.innerHTML = `<button class='status' onClick='toggleStatus(${index})'>${convertStatus(
       book.status
     )}</button>`;
-    tableAction.innerHTML = `<button class='remove' data-index='${index}' onClick='removeRow(${index})'>Remove</button>`;
+    tableAction.innerHTML = `<button class='remove' onClick='removeRow(${index})'>Remove</button>`;
   });
 }
 
