@@ -12,8 +12,10 @@ addBtn.addEventListener("click", () => modal.showModal());
 form.addEventListener("submit", (event) => event.preventDefault());
 form.addEventListener("submit", addToLibrary);
 form.addEventListener("submit", renderBooks);
+form.addEventListener("submit", clearForm);
 form.addEventListener("submit", () => modal.close());
 
+cancelBtn.addEventListener("click", clearForm);
 cancelBtn.addEventListener("click", () => modal.close());
 
 function addDefaultContent() {
@@ -91,6 +93,10 @@ function renderBooks() {
     )}</button>`;
     tableAction.innerHTML = `<button class='remove' onClick='removeRow(${index})'>Remove</button>`;
   });
+}
+
+function clearForm() {
+  form.reset();
 }
 
 function removeRow(index) {
