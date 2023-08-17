@@ -16,6 +16,8 @@ form.addEventListener("submit", () => modal.close());
 
 cancelBtn.addEventListener("click", () => modal.close());
 
+tbody.addEventListener("click", removeRow);
+
 function addDefaultContent() {
   const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
   library.push(defaultBook);
@@ -87,10 +89,10 @@ function renderBooks() {
   });
 }
 
-// function removeRow() {
-//   tbody.addEventListener("click", (event) => {
-//     if (event.target.className === "remove") {
-//       let index = event.target.getAttribute("data-index");
-//     }
-//   });
-// }
+function removeRow(event) {
+  if (event.target.className === "remove") {
+    let index = event.target.getAttribute("data-index");
+    library.splice(index, 1);
+    renderBooks();
+  }
+}
