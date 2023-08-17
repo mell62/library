@@ -19,7 +19,7 @@ cancelBtn.addEventListener("click", () => modal.close());
 tbody.addEventListener("click", removeRow);
 
 function addDefaultContent() {
-  const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, "Not Read");
+  const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
   library.push(defaultBook);
   renderBooks();
 }
@@ -30,6 +30,10 @@ function Book(title, author, pages, status) {
   this.pages = pages;
   this.status = status;
 }
+
+Book.prototype.toggleStatus = function () {
+  this.status = !this.status;
+};
 
 function addToLibrary() {
   const title = document.querySelector("#title").value;
@@ -84,7 +88,9 @@ function renderBooks() {
     tableTitle.textContent = `${book.title}`;
     tableAuthor.textContent = `${book.author}`;
     tablePages.textContent = `${book.pages}`;
-    tableStatus.textContent = `${convertStatus(book.status)}`;
+    tableStatus.innerHTML = `<button class='status' onClick='toggleStatus(${index})'>${convertStatus(
+      book.status
+    )}</button>`;
     tableAction.innerHTML = `<button class='remove' data-index="${index}">Remove</button>`;
   });
 }
@@ -95,4 +101,9 @@ function removeRow(event) {
     library.splice(index, 1);
     renderBooks();
   }
+}
+
+function toggleStatus(index) {
+  library[index].toggleStatus();
+  renderBooks();
 }
