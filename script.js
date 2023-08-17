@@ -97,6 +97,7 @@ function renderBooks() {
   });
 
   updateTotalBooks();
+  updateTotalBooksRead();
 }
 
 function clearForm() {
@@ -120,4 +121,18 @@ function totalBooks() {
 
 function updateTotalBooks() {
   numberOfBooks.textContent = totalBooks();
+}
+
+function totalBooksRead() {
+  let totalBooksRead = 0;
+  for (let book of library) {
+    if (book.status === true) {
+      totalBooksRead++;
+    }
+  }
+  return totalBooksRead;
+}
+
+function updateTotalBooksRead() {
+  numberOfBooksRead.textContent = totalBooksRead();
 }
