@@ -16,8 +16,6 @@ form.addEventListener("submit", () => modal.close());
 
 cancelBtn.addEventListener("click", () => modal.close());
 
-tbody.addEventListener("click", removeRow);
-
 function addDefaultContent() {
   const defaultBook = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
   library.push(defaultBook);
@@ -91,16 +89,13 @@ function renderBooks() {
     tableStatus.innerHTML = `<button class='status' onClick='toggleStatus(${index})'>${convertStatus(
       book.status
     )}</button>`;
-    tableAction.innerHTML = `<button class='remove' data-index="${index}">Remove</button>`;
+    tableAction.innerHTML = `<button class='remove' data-index='${index}' onClick='removeRow(${index})'>Remove</button>`;
   });
 }
 
-function removeRow(event) {
-  if (event.target.className === "remove") {
-    let index = event.target.getAttribute("data-index");
-    library.splice(index, 1);
-    renderBooks();
-  }
+function removeRow(index) {
+  library.splice(index, 1);
+  renderBooks();
 }
 
 function toggleStatus(index) {
