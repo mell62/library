@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+tr{
+    display: flex;
+}
+
+td, th{
+    width: 100%;
+}
