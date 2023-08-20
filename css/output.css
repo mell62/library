@@ -571,6 +571,79 @@ video {
   min-width: max-content;
 }
 
+.min-w-min {
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
+
+.min-w-\[20\%\] {
+  min-width: 20%;
+}
+
+.min-w-\[50\%\] {
+  min-width: 50%;
+}
+
+.min-w-\[100\%\] {
+  min-width: 100%;
+}
+
+.min-w-full {
+  min-width: 100%;
+}
+
+.min-w-\[80\%\] {
+  min-width: 80%;
+}
+
+.min-w-\[10rem\] {
+  min-width: 10rem;
+}
+
+.min-w-\[30rem\] {
+  min-width: 30rem;
+}
+
+.min-w-\[20rem\] {
+  min-width: 20rem;
+}
+
+.min-w-\[10c\] {
+  min-width: 10c;
+}
+
+.min-w-\[20c\] {
+  min-width: 20c;
+}
+
+.min-w-\[30c\] {
+  min-width: 30c;
+}
+
+.min-w-\[10ch\] {
+  min-width: 10ch;
+}
+
+.min-w-\[20ch\] {
+  min-width: 20ch;
+}
+
+.min-w-\[25ch\] {
+  min-width: 25ch;
+}
+
+.min-w-\[30ch\] {
+  min-width: 30ch;
+}
+
+.min-w-\[28ch\] {
+  min-width: 28ch;
+}
+
+.min-w-\[26ch\] {
+  min-width: 26ch;
+}
+
 .border-separate {
   border-collapse: separate;
 }
@@ -615,6 +688,19 @@ video {
 
 .gap-8 {
   gap: 2rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem;
+}
+
+.gap-y-8 {
+  row-gap: 2rem;
 }
 
 .rounded-md {
@@ -706,6 +792,10 @@ video {
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-6 {
+  padding-top: 1.5rem;
 }
 
 .text-center {
