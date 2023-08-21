@@ -66,9 +66,9 @@ function addCells() {
 
 function convertStatus(status) {
   if (status === true) {
-    return "Read";
+    return "&#10004 Read";
   } else {
-    return "Not Read";
+    return "&#10006 Not Read";
   }
 }
 
@@ -93,7 +93,8 @@ function renderBooks() {
     tableStatus.innerHTML = `<button class='status' onClick='toggleStatus(${index})'>${convertStatus(
       book.status
     )}</button>`;
-    tableAction.innerHTML = `<button class='remove' onClick='removeRow(${index})'>Remove</button>`;
+    tableAction.innerHTML = `<button class='remove' onClick='removeRow(${index})'>&#128465; Remove</button>`;
+    applyStyling();
   });
 
   updateTotalBooks();
@@ -135,4 +136,14 @@ function totalBooksRead() {
 
 function updateTotalBooksRead() {
   numberOfBooksRead.textContent = totalBooksRead();
+}
+
+function applyStyling() {
+  library.forEach(() => {
+    const tableData = document.querySelectorAll("td");
+    const tableStatus = tableData[tableData.length - 2];
+    const tableAction = tableData[tableData.length - 1];
+    tableStatus.classList.add("font-bold", "text-amber-700");
+    tableAction.classList.add("font-bold", "text-amber-700");
+  });
 }
