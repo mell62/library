@@ -37,6 +37,10 @@ tbody tr:last-child{
     border-bottom-right-radius: 0.75rem;
 }
 
+button:focus{
+    outline: none;
+}
+
 .modalOpacity{
     transform: scale(1);
 }
