@@ -10,14 +10,19 @@ const library = [];
 addDefaultContent();
 
 addBtn.addEventListener("click", () => modal.showModal());
+addBtn.addEventListener("click", () => modal.classList.add("modalOpacity"));
 
 form.addEventListener("submit", (event) => event.preventDefault());
 form.addEventListener("submit", addToLibrary);
 form.addEventListener("submit", renderBooks);
 form.addEventListener("submit", clearForm);
+form.addEventListener("submit", () => modal.classList.remove("modalOpacity"));
 form.addEventListener("submit", () => modal.close());
 
 cancelBtn.addEventListener("click", clearForm);
+cancelBtn.addEventListener("click", () =>
+  modal.classList.remove("modalOpacity")
+);
 cancelBtn.addEventListener("click", () => modal.close());
 
 function addDefaultContent() {
