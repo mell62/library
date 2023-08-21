@@ -566,78 +566,12 @@ video {
   width: 100%;
 }
 
-.min-w-max {
-  min-width: -moz-max-content;
-  min-width: max-content;
-}
-
-.min-w-min {
-  min-width: -moz-min-content;
-  min-width: min-content;
-}
-
-.min-w-\[20\%\] {
-  min-width: 20%;
-}
-
-.min-w-\[50\%\] {
-  min-width: 50%;
-}
-
-.min-w-\[100\%\] {
-  min-width: 100%;
-}
-
-.min-w-full {
-  min-width: 100%;
-}
-
-.min-w-\[80\%\] {
-  min-width: 80%;
-}
-
-.min-w-\[10rem\] {
-  min-width: 10rem;
-}
-
-.min-w-\[30rem\] {
-  min-width: 30rem;
+.w-40 {
+  width: 10rem;
 }
 
 .min-w-\[20rem\] {
   min-width: 20rem;
-}
-
-.min-w-\[10c\] {
-  min-width: 10c;
-}
-
-.min-w-\[20c\] {
-  min-width: 20c;
-}
-
-.min-w-\[30c\] {
-  min-width: 30c;
-}
-
-.min-w-\[10ch\] {
-  min-width: 10ch;
-}
-
-.min-w-\[20ch\] {
-  min-width: 20ch;
-}
-
-.min-w-\[25ch\] {
-  min-width: 25ch;
-}
-
-.min-w-\[30ch\] {
-  min-width: 30ch;
-}
-
-.min-w-\[28ch\] {
-  min-width: 28ch;
 }
 
 .min-w-\[26ch\] {
@@ -690,15 +624,6 @@ video {
   gap: 2rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem;
-}
-
 .gap-y-8 {
   row-gap: 2rem;
 }
@@ -726,6 +651,14 @@ video {
 
 .border-dashed {
   border-style: dashed;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-double {
+  border-style: double;
 }
 
 .border-amber-700 {
@@ -758,6 +691,135 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-\[rgba\(183\2c 83\2c 9\2c 0\.1\)\] {
+  background-color: rgba(183,83,9,0.1);
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.from-white {
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-amber-700 {
+  --tw-gradient-from: #b45309 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(180 83 9 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.from-0\% {
+  --tw-gradient-from-position: 0%;
+}
+
+.from-50\% {
+  --tw-gradient-from-position: 50%;
+}
+
+.from-100\% {
+  --tw-gradient-from-position: 100%;
+}
+
+.via-amber-700 {
+  --tw-gradient-to: rgb(180 83 9 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), #b45309 var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
+.to-amber-700 {
+  --tw-gradient-to: #b45309 var(--tw-gradient-to-position);
+}
+
+.to-white {
+  --tw-gradient-to: #fff var(--tw-gradient-to-position);
+}
+
+.to-0\% {
+  --tw-gradient-to-position: 0%;
+}
+
+.to-100\% {
+  --tw-gradient-to-position: 100%;
+}
+
+.to-50\% {
+  --tw-gradient-to-position: 50%;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-\[length\:200\%_100\%\] {
+  background-size: 200% 100%;
+}
+
+.bg-\[length\:100\%_100\%\] {
+  background-size: 100% 100%;
+}
+
+.bg-\[length\:100\%_200\%\] {
+  background-size: 100% 200%;
+}
+
+.bg-\[length\:0_100\%\] {
+  background-size: 0 100%;
+}
+
+.bg-\[length\:300\%_100\%\] {
+  background-size: 300% 100%;
+}
+
+.bg-\[length\:400\%_100\%\] {
+  background-size: 400% 100%;
+}
+
+.bg-\[length\:500\%_100\%\] {
+  background-size: 500% 100%;
+}
+
+.bg-\[length\:1000\%_100\%\] {
+  background-size: 1000% 100%;
+}
+
+.bg-\[length\:-200\%_100\%\] {
+  background-size: -200% 100%;
+}
+
+.bg-\[length\:-200\%_-100\%\] {
+  background-size: -200% -100%;
+}
+
+.bg-\[length\:0\%_100\%\] {
+  background-size: 0% 100%;
+}
+
+.bg-\[length\:100\%_0\%\] {
+  background-size: 100% 0%;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-\[200\%_100\%\] {
+  background-position: 200% 100%;
+}
+
+.bg-\[position\:200\%_100\%\] {
+  background-position: 200% 100%;
+}
+
+.bg-right-bottom {
+  background-position: right bottom;
+}
+
 .p-16 {
   padding: 4rem;
 }
@@ -786,16 +848,12 @@ video {
   padding-top: 0.5rem;
 }
 
-.pt-4 {
-  padding-top: 1rem;
-}
-
 .pt-8 {
   padding-top: 2rem;
 }
 
-.pt-6 {
-  padding-top: 1.5rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -846,8 +904,58 @@ video {
   transition-duration: 150ms;
 }
 
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[background-position\] {
+  transition-property: background-position;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[background-image\] {
+  transition-property: background-image;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[background\] {
+  transition-property: background;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-\[background-size\] {
+  transition-property: background-size;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .duration-200 {
   transition-duration: 200ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.ease-linear {
+  transition-timing-function: linear;
+}
+
+.ease-in {
+  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 tr{
@@ -886,6 +994,84 @@ tbody tr:last-child{
 .hover\:bg-amber-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(180 83 9 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gradient-to-r:hover {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.hover\:from-white:hover {
+  --tw-gradient-from: #fff var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(255 255 255 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:from-0\%:hover {
+  --tw-gradient-from-position: 0%;
+}
+
+.hover\:to-amber-700:hover {
+  --tw-gradient-to: #b45309 var(--tw-gradient-to-position);
+}
+
+.hover\:to-100\%:hover {
+  --tw-gradient-to-position: 100%;
+}
+
+.hover\:bg-\[length\:100\%_0\]:hover {
+  background-size: 100% 0;
+}
+
+.hover\:bg-\[length\:100\%_100\%\]:hover {
+  background-size: 100% 100%;
+}
+
+.hover\:bg-\[length\:100\%_0\%\]:hover {
+  background-size: 100% 0%;
+}
+
+.hover\:bg-\[length\:0\%_100\%\]:hover {
+  background-size: 0% 100%;
+}
+
+.hover\:bg-\[length\:1000\%_100\%\]:hover {
+  background-size: 1000% 100%;
+}
+
+.hover\:bg-\[100\%_0\]:hover {
+  background-position: 100% 0;
+}
+
+.hover\:bg-\[100\%_0\%\]:hover {
+  background-position: 100% 0%;
+}
+
+.hover\:bg-\[200\%_0\]:hover {
+  background-position: 200% 0;
+}
+
+.hover\:bg-\[0_100\%\]:hover {
+  background-position: 0 100%;
+}
+
+.hover\:bg-\[0\%_100\%\]:hover {
+  background-position: 0% 100%;
+}
+
+.hover\:bg-right:hover {
+  background-position: right;
+}
+
+.hover\:bg-\[position\:right_center\]:hover {
+  background-position: right center;
+}
+
+.hover\:bg-\[position\:100\%_0\]:hover {
+  background-position: 100% 0;
+}
+
+.hover\:bg-left-bottom:hover {
+  background-position: left bottom;
 }
 
 .hover\:text-white:hover {
