@@ -62,19 +62,18 @@
       </div>
     </div>
     <dialog
-      class="modal transform scale-[0.1] transition-transform duration-300 ease-in-out"
+      class="border-2 border-white rounded-md modal transform scale-[0.1] transition-transform duration-300 ease-in-out"
     >
       <form
         action=""
-        class="border border-black bg-white p-16 book-form flex flex-col gap-4"
+        class="border-4 border-amber-700 rounded-md bg-white p-16 book-form flex flex-col gap-6"
       >
         <div class="flex flex-col">
-          <label for="title">Title:</label
-          ><input
+          <input
             type="text"
             id="title"
             name="title"
-            class="border border-black p-1"
+            class="border-2 border-amber-700 rounded-sm text-green-700 p-1 focus:outline-none focus:border-black hover:border-black"
             required
             autocomplete="off"
             maxlength="30"
@@ -82,12 +81,11 @@
           />
         </div>
         <div class="flex flex-col">
-          <label for="author">Author:</label
-          ><input
+          <input
             type="text"
             id="author"
             name="author"
-            class="border border-black p-1"
+            class="border-2 border-amber-700 rounded-sm text-green-700 p-1 focus:outline-none focus:border-black hover:border-black"
             required
             autocomplete="off"
             maxlength="30"
@@ -95,12 +93,11 @@
           />
         </div>
         <div class="flex flex-col">
-          <label for="pages">No. of Pages:</label
-          ><input
+          <input
             type="number"
             id="pages"
             name="pages"
-            class="border border-black p-1"
+            class="border-2 border-amber-700 rounded-sm text-green-700 p-1 focus:outline-none focus:border-black invalid:text-red-600 hover:border-black"
             required
             autocomplete="off"
             max="10000"
@@ -108,19 +105,26 @@
             placeholder="No. of Pages"
           />
         </div>
-        <div class="flex justify-center gap-4">
-          <input type="checkbox" id="status" name="status" />
-          <label for="status">I have read it</label>
+        <div class="flex justify-center items-center gap-4">
+          <input
+            type="checkbox"
+            id="status"
+            name="status"
+            class="focus:outline-none appearance-none border-2 border-amber-700 rounded-sm w-5 h-5 text-green-700 before:content-['✔'] before:absolute before:bottom-[8.6rem] before:invisible checked:before:visible hover:border-black"
+          />
+          <label for="status" class="text-amber-700">I have read it</label>
         </div>
-        <div class="flex justify-evenly">
+        <div class="flex justify-between text-amber-700">
           <button
-            class="cancel-btn border border-black pr-4 pl-4 pt-2 pb-2"
+            class="cancel-btn border-2 border-amber-700 rounded-md pr-3 pl-3 pt-2 pb-2 hover:bg-amber-700 hover:text-white hover:shadow-md transition-all duration-300"
             type="button"
           >
-            Cancel
+            &#10006; Cancel
           </button>
-          <button class="border border-black pr-4 pl-4 pt-2 pb-2">
-            Submit
+          <button
+            class="border-2 border-amber-700 rounded-md pr-3 pl-3 pt-2 pb-2 hover:bg-amber-700 hover:text-white hover:shadow-md transition-all duration-300"
+          >
+            &#128218; Submit
           </button>
         </div>
       </form>
