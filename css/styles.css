@@ -8,20 +8,19 @@ tr{
 }
 
 td, th{
-    width: 100%;
+    width: 20%;
     overflow-wrap: break-word;
     padding: 0.5rem;
 }
 
 tbody tr{
-    background-color: rgba(183,83,9,0.1);
+    background-color: rgba(180,83,9,0.1);
 }
 
 tbody tr:nth-child(2n){
-    background-color: rgba(183,83,9,0.2);
+    background-color: rgba(180,83,9,0.2);
 
 }
-
 
 td{
     font-weight: 500;
@@ -32,7 +31,7 @@ tbody tr{
 }
 
 tbody tr:last-child{
-    border: 1px solid rgba(183,83,9,0.1);
+    border: 1px solid rgba(180,83,9,0.1);
     border-bottom-left-radius: 0.75rem;
     border-bottom-right-radius: 0.75rem;
 }
