@@ -43,10 +43,13 @@ Book.prototype.toggleStatus = function () {
 };
 
 function addToLibrary() {
-  const title = document.querySelector("#title").value;
-  const author = document.querySelector("#author").value;
-  const pages = document.querySelector("#pages").value;
-  const status = document.querySelector("#status").checked;
+  let title = document.querySelector("#title").value;
+  let author = document.querySelector("#author").value;
+  let pages = document.querySelector("#pages").value;
+  let status = document.querySelector("#status").checked;
+
+  pages = Number(pages); //to remove leading zeros
+
   const newBook = new Book(title, author, pages, status);
 
   library.push(newBook);
