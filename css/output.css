@@ -578,6 +578,26 @@ video {
   width: 100%;
 }
 
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-10\/12 {
+  width: 83.333333%;
+}
+
+.w-48 {
+  width: 12rem;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
 .min-w-\[23rem\] {
   min-width: 23rem;
 }
@@ -759,6 +779,14 @@ video {
 
 .p-\[calc\(0\.2vw\+1rem\)\] {
   padding: calc(0.2vw + 1rem);
+}
+
+.p-14 {
+  padding: 3.5rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .pb-2 {
