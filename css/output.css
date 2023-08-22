@@ -944,6 +944,21 @@ button:focus{
   bottom: 8.6rem;
 }
 
+.before\:bottom-\[9rem\]::before {
+  content: var(--tw-content);
+  bottom: 9rem;
+}
+
+.before\:bottom-\[9\.5rem\]::before {
+  content: var(--tw-content);
+  bottom: 9.5rem;
+}
+
+.before\:bottom-\[9\.2rem\]::before {
+  content: var(--tw-content);
+  bottom: 9.2rem;
+}
+
 .before\:content-\[\'\2714\'\]::before {
   --tw-content: '✔';
   content: var(--tw-content);
