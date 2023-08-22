@@ -1,6 +1,6 @@
 # Library
 
-This is Library of Athena, a web application with the ability to record books that you read, and books you plan to read, implemented using HTML, CSS and JavaScript
+This is Library of Athena, a web application with the ability to record books that you read, and books you plan to read, implemented using HTML, CSS and JavaScript.
 
 **Check it out :point_right:[here](https://mell62.github.io/library):point_left:!**
 
